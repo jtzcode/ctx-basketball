@@ -1,8 +1,6 @@
 <div class="b-club-navbar-container">
   <div class="b-club-navbar-logo"><img [src]="logoURL"/></div>
   <div class="ui secondary pointing menu">
-    <a class="item">
-      Home
-    </a>
+    <b-club-navbar-item (onSelected)="onItemActive($event)" [itemTitle]="option.title" [route]="option.action" [isActive]="option.isActive" *ngFor="let option of menuOptions"></b-club-navbar-item>
   </div>
 </div>
