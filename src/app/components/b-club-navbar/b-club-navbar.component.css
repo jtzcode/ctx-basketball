@@ -1,0 +1,11 @@
+.b-club-navbar-container {
+    position: relative;
+}
+#b-club-navbar-logo {
+    padding: 5px 5px;
+    margin-right: 5px;
+}
+.b-club-navbar-items {
+    margin-top: 5px;
+    border-radius: 0;
+}

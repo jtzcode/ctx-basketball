@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { LOGIN_TEXT } from '../../constants/display';
 
 @Component({
   selector: 'b-club-navbar-item',
@@ -14,22 +15,15 @@ export class BClubNavbarItemComponent implements OnInit {
 
   @Output() onSelected = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   clickItem() {
-    this.onSelected.emit(this.itemTitle);
-  }
-
-  onActiveChange(title: string) {
-    if (title == this.itemTitle) {
-      this.isActive = !this.isActive;
-    } else {
-      if (this.isActive) {
-        this.isActive = false;
-      }
+    if (this.itemTitle != LOGIN_TEXT) {
+      this.onSelected.emit(this.itemTitle);
     }
   }
 

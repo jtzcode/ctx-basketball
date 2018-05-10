@@ -1,6 +1,11 @@
 <div class="b-club-navbar-container">
-  <div class="b-club-navbar-logo"><img [src]="logoURL"/></div>
-  <div class="ui secondary pointing menu">
+  <div class="b-club-navbar-items ui inverted menu">
+    <div id="b-club-navbar-logo" class="item">
+      <img [src]="logoURL">
+    </div>
     <b-club-navbar-item (onSelected)="onItemActive($event)" [itemTitle]="option.title" [route]="option.action" [isActive]="option.isActive" *ngFor="let option of menuOptions"></b-club-navbar-item>
+    <div class="right menu">
+      <b-club-navbar-item [itemTitle]="'Login'" [isActive]="false"></b-club-navbar-item>
+    </div>
   </div>
 </div>
