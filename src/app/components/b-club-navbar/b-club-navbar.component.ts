@@ -10,6 +10,8 @@ export class BClubNavbarComponent implements OnInit {
 
   private logoURL: string;
   private menuOptions: BClubNavbarOption[];
+  private aboutItems: any[];
+  
   constructor() {
     this.logoURL = '../../assets/images/b-logo.png';
     this.menuOptions = [
@@ -27,6 +29,16 @@ export class BClubNavbarComponent implements OnInit {
         title: 'Wiki',
         action: '#wiki',
         isActive: false
+      }
+    ];
+    this.aboutItems = [
+      {
+        title: "How to Contribute",
+        action: "/contribute"
+      },
+      {
+        title: "About Us",
+        action: "/about"
       }
     ];
    }

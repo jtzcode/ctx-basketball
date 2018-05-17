@@ -6,6 +6,15 @@
     <b-club-navbar-item (onSelected)="onItemActive($event)" [itemTitle]="option.title" [route]="option.action" [isActive]="option.isActive" *ngFor="let option of menuOptions"></b-club-navbar-item>
     <div class="right menu">
       <b-club-navbar-item [itemTitle]="'Login'" [isActive]="false"></b-club-navbar-item>
+      <div class="ui compact menu inverted">
+          <div class="ui simple dropdown item">
+              About
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item about-item" *ngFor="let item of aboutItems">{{item.title}}</div>
+              </div>
+          </div>
+      </div>
     </div>
   </div>
 </div>

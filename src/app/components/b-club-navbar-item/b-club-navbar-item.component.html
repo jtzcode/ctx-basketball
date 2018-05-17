@@ -1,3 +1,4 @@
 <a class="item" [class.active]="isActive" [attr.href]="route" (click)="clickItem()">
     {{itemTitle}}
+    <i *ngIf="isDropdown" class="dropdown icon"></i>
 </a>

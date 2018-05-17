@@ -12,6 +12,7 @@ export class BClubNavbarItemComponent implements OnInit {
   @Input() private itemTitle: string;
   @Input() private route: string;
   @Input() private isActive: boolean;
+  @Input() private isDropdown: boolean;
 
   @Output() onSelected = new EventEmitter<string>();
 
