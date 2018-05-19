@@ -1,0 +1,24 @@
+.b-club-navbar-container {
+    position: relative;
+}
+#b-club-navbar-logo {
+    padding: 5px 5px;
+    margin-right: 5px;
+}
+.b-club-navbar-items {
+    margin-top: 5px;
+    border-radius: 0;
+}
+.ui.menu .ui.dropdown .menu>.about-item {
+    background-color: #1b1c1d !important;
+    color: white !important;
+}
+.ui.menu .ui.dropdown .menu>.about-item:hover {
+    background-color: #1b1c1d !important;
+    color: white !important;
+    opacity: 0.8;
+}
+
+.ui.menu .ui.dropdown .menu{
+    border: none;
+}
