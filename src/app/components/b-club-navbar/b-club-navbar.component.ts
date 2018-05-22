@@ -17,28 +17,28 @@ export class BClubNavbarComponent implements OnInit {
     this.menuOptions = [
       {
         title: 'Home',
-        action: '#',
+        action: 'home',
         isActive: true
       },
       {
         title: 'Gallery',
-        action: '#gallery',
+        action: 'gallery',
         isActive: false
       },
       {
         title: 'Wiki',
-        action: '#wiki',
+        action: 'wiki',
         isActive: false
       }
     ];
     this.aboutItems = [
       {
         title: "How to Contribute",
-        action: "/contribute"
+        action: "contribute"
       },
       {
         title: "About Us",
-        action: "/about"
+        action: "about"
       }
     ];
    }
