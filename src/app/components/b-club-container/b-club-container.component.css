@@ -1,0 +1,33 @@
+.b-club-container {
+    overflow: auto;
+    margin: 0 auto;
+    width: 80%;
+    height: calc(100% - 50px);
+    position: relative;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid lightgrey;
+}
+.b-club-left-container {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-left: solid 1px lightgrey
+}
+.b-club-right-container {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-right: solid 1px lightgrey
+}
+.b-club-app-divider {
+    left: 70%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+}

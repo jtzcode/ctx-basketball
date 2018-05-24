@@ -1,5 +1,8 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { LOGIN_TEXT } from '../../constants/display';
+import { MESSAGE_VALUES } from '../../constants/messages';
+import { BClubMessageService } from '../../services/b-club-message.service';
 
 @Component({
   selector: 'b-club-navbar-item',
@@ -16,11 +19,25 @@ export class BClubNavbarItemComponent implements OnInit {
 
   @Output() onSelected = new EventEmitter<string>();
 
-  constructor() {
+  private subscription: Subscription;
+  private outsideMessage: any;
+
+  constructor(private messageService: BClubMessageService) {
+    this.subscription = this.messageService.getMessage().subscribe(message => {
+      this.outsideMessage = message;
+      if(message && message.text == MESSAGE_VALUES.ABOUT_ITEM_CLICKED) {
+        //Use an undefined title to unselect all menu items
+        this.onSelected.emit("UNSELECTED");
+      }
+    });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.subscription.unsubscribe();
+}
 
   clickItem() {
     if (this.itemTitle != LOGIN_TEXT) {

@@ -11,7 +11,7 @@
               About
               <i class="dropdown icon"></i>
               <div class="menu">
-                <div class="item about-item" *ngFor="let item of aboutItems">{{item.title}}</div>
+                <div class="item about-item" [routerLink]="item.action" (click)="onItemClicked()" *ngFor="let item of aboutItems">{{item.title}}</div>
               </div>
           </div>
       </div>
