@@ -1,0 +1,5 @@
+<div class="grid">
+  <button mat-raised-button class="grid-item" *ngFor="let item of imageItems; let i = index" (click)="lightbox.open(i)">
+    <span class="grid-image" [style.backgroundImage]="'url('+ item.data.thumb +')'"></span>
+  </button>
+</div>

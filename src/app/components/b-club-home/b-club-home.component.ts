@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BClubHomeComponent implements OnInit {
 
+  private clubHeaderTitle: string;
+  private fansHeaderTitle: string;
+  
   constructor() { }
 
   ngOnInit() {
+    this.clubHeaderTitle = 'Club Activities';
+    this.fansHeaderTitle = 'Super Stars Shots';
   }
 
 }
