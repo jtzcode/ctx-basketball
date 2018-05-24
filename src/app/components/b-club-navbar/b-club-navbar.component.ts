@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BClubNavbarOption } from '../../models/b-club-navbar-option';
+import { BClubMessageService } from '../../services/b-club-message.service';
+import { MESSAGE_VALUES } from '../../constants/messages';
 
 @Component({
   selector: 'b-club-navbar',
@@ -12,7 +14,7 @@ export class BClubNavbarComponent implements OnInit {
   private menuOptions: BClubNavbarOption[];
   private aboutItems: any[];
   
-  constructor() {
+  constructor(private messageService: BClubMessageService) {
     this.logoURL = '../../assets/images/b-logo.png';
     this.menuOptions = [
       {
@@ -22,12 +24,12 @@ export class BClubNavbarComponent implements OnInit {
       },
       {
         title: 'Gallery',
-        action: 'gallery',
+        action: 'home',
         isActive: false
       },
       {
         title: 'Wiki',
-        action: 'wiki',
+        action: 'home',
         isActive: false
       }
     ];
@@ -54,6 +56,10 @@ export class BClubNavbarComponent implements OnInit {
         opt.isActive = true;
       }
     });
+  }
+
+  onItemClicked() {
+    this.messageService.sendMessage(MESSAGE_VALUES.ABOUT_ITEM_CLICKED);
   }
 
 }
