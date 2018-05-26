@@ -12,9 +12,9 @@ export class BClubGalleryComponent implements OnInit {
   imageItems: GalleryItem[] = [
     new ImageItem('assets/images/gallery/g-1.jpg', 'assets/images/gallery/g-1.jpg'),
     new ImageItem('assets/images/gallery/g-2.jpg', 'assets/images/gallery/g-2.jpg'),
-    new ImageItem('assets/images/gallery/g-3.png', 'assets/images/gallery/g-3.png'),
     new ImageItem('assets/images/gallery/g-4.jpg', 'assets/images/gallery/g-4.jpg'),
-    new ImageItem('assets/images/gallery/g-4.jpg', 'assets/images/gallery/g-4.jpg')
+    new ImageItem('assets/images/gallery/g-4.jpg', 'assets/images/gallery/g-4.jpg'),
+    new ImageItem('assets/images/gallery/g-3.png', 'assets/images/gallery/g-3.png')
   ];
 
   constructor(public gallery: Gallery, public lightbox: Lightbox) { }

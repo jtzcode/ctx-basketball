@@ -1,16 +1,15 @@
 .b-club-activity-header {
-    text-align: center;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 600;
-    padding: 20px;
-    padding-bottom: 5px;
+    margin: 10px;
+    margin-top: 10px !important;
 }
 
 .b-club-fans-header {
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
-    padding: 10px 20px;
+    margin: 10px;
 }
 
 .b-club-gallery {
