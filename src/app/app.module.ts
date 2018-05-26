@@ -15,6 +15,7 @@ import { APP_ROUTES } from './constants/routes';
 import { BClubAboutComponent } from './components/b-club-about/b-club-about.component';
 import { BClubHomeComponent } from './components/b-club-home/b-club-home.component';
 import { BClubGalleryComponent } from './components/b-club-gallery/b-club-gallery.component';
+import { BClubBoardComponent } from './components/b-club-board/b-club-board.component';
 
 const galleryConfig = {};
 const lightboxConfig = {};
@@ -27,7 +28,8 @@ const lightboxConfig = {};
     BClubContainerComponent,
     BClubAboutComponent,
     BClubHomeComponent,
-    BClubGalleryComponent
+    BClubGalleryComponent,
+    BClubBoardComponent
   ],
   imports: [
     BrowserModule,

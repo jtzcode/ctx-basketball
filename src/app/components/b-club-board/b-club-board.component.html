@@ -1,0 +1,34 @@
+<div class="b-club-board-container">
+  <div class="ui black segment b-club-board-header">
+    <a class="ui teal ribbon label">DAILY</a>
+    {{boardActivityTitle}}
+    <!-- <div class="b-club-activity-type"><a class="ui teal tag label">DAILY</a></div> -->
+    <!-- <div class="ui green right corner label">
+        <i class="bell outline icon"></i>
+    </div> -->
+  </div>
+  <div class="b-club-board-calendar">
+    <table class="ui single line table">
+      <tbody>
+        <tr>
+          <td>Date:</td>
+          <td>{{boardActStartDate}}</td>
+        </tr>
+        <tr>
+          <td>Time:</td>
+          <td>{{boardActStartTime}} -- {{boardActEndTime}}</td>
+        </tr>
+        <tr>
+          <td>Court:</td>
+          <td>{{boardActCourt}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ui blue segment b-club-board-header">
+    {{boardBudgetTitle}}
+  </div>
+  <div class="ui grey segment b-club-board-header">
+    {{boardClubTitle}}
+  </div>
+</div>

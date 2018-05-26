@@ -1,0 +1,23 @@
+.b-club-board-container {
+    height: 500px;
+    margin: 10px;
+    position: relative;
+}
+.b-club-board-header {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+}
+.label {
+    font-size: 0.55em;
+}
+.ribbon.label {
+    position: absolute;
+    left: -12px;
+    top: 8px;
+    opacity: 0.8;
+}
+.b-club-activity-type {
+    margin: 0 10px;
+    display: inline-block;
+}
