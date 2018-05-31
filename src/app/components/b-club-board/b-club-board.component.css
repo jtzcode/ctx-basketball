@@ -1,5 +1,4 @@
 .b-club-board-container {
-    height: 500px;
     margin: 10px;
     position: relative;
 }
@@ -20,4 +19,7 @@
 .b-club-activity-type {
     margin: 0 10px;
     display: inline-block;
+}
+.b-club-activity-card {
+    width: 100% !important;
 }
