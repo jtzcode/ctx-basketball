@@ -25,3 +25,18 @@
     background-size: cover;
     background-position: center center;
 }
+
+.gallery-container {
+    width: 100%;
+    margin: 10px;
+}
+
+.gallery-box 
+{
+    height: 500px;
+    width: calc(100% - 20px);
+}
+
+.slide {
+    z-index: 4;
+}

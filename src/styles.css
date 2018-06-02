@@ -2,3 +2,8 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '~@ngx-gallery/core/styles/gallery.css';
 @import '~@ngx-gallery/core/styles/lightbox.css';
+
+.slide div {
+    background-repeat: no-repeat;
+    background-size: contain !important;
+}

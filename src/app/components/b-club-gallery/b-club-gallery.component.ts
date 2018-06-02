@@ -17,10 +17,13 @@ export class BClubGalleryComponent implements OnInit {
     new ImageItem('assets/images/gallery/g-3.png', 'assets/images/gallery/g-3.png')
   ];
 
-  constructor(public gallery: Gallery, public lightbox: Lightbox) { }
+  constructor(public gallery: Gallery) { }
 
   ngOnInit() {
-    this.gallery.ref('lightbox').load(this.imageItems);
+    //this.gallery.ref('lightbox').load(this.imageItems);
+  }
+
+  openImage() {
   }
 
 }
