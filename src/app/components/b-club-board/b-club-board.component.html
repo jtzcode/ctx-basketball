@@ -1,6 +1,6 @@
 <div class="b-club-board-container">
   <div class="ui black segment b-club-board-header">
-    <a class="ui teal ribbon label">DAILY</a>
+    <a class="ui teal ribbon label">{{boardInfo.boardActType}}</a>
     {{boardActivityTitle}}
     <!-- <div class="b-club-activity-type"><a class="ui teal tag label">DAILY</a></div> -->
     <!-- <div class="ui green right corner label">
@@ -8,7 +8,7 @@
     </div> -->
   </div>
   <div class="b-club-board-calendar">
-    <table class="ui single line table">
+    <!-- <table class="ui single line table">
       <tbody>
         <tr>
           <td>Date:</td>
@@ -23,12 +23,74 @@
           <td>{{boardActCourt}}</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+    <div class="ui cards">
+      <div class="card b-club-activity-card">
+        <div class="content">
+          <img class="right floated ui image" src="assets/images/canglong.png">
+          <div class="header">
+            {{boardInfo.boardActStartDate}}
+          </div>
+          <div class="meta">
+            {{boardInfo.boardActStartTime}} -- {{boardInfo.boardActEndTime}}
+          </div>
+          <div class="description">
+            {{boardInfo.boardActCourt}}
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="ui two buttons">
+            <div class="ui basic green button">Accept</div>
+            <div class="ui basic red button">Decline</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="ui blue segment b-club-board-header">
+  <div class="ui black segment b-club-board-header">
     {{boardBudgetTitle}}
   </div>
-  <div class="ui grey segment b-club-board-header">
+  <div class="ui card b-club-activity-card">
+    <div class="content">
+      <h4 class="ui sub header">Club Budget Balance</h4>
+      <div class="ui small feed">
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+                <div class="ui indicating progress" id="club-balance">
+                  <div class="bar b-club-balance-bar">
+                      <div class="progress"></div>
+                  </div>
+                  <div class="label"><span class="b-club-balance-label">{{ this.boardInfo.boardBudgetBalance }} / {{ this.boardInfo.boardBudgetTotal }}</span> - First Half - 2018</div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="ui sub header">Private Budget Balance</h4>
+      <div class="ui small feed">
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+                <div class="ui indicating progress" id="private-balance">
+                  <div class="bar b-club-balance-bar">
+                      <div class="progress"></div>
+                  </div>
+                  <div class="label"><span class="b-club-private-label">{{ this.boardInfo.boardBudgetPrivate }} / {{ this.boardInfo.boardPrivateTotal }}</span> - First Half - 2018</div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="extra content">
+      <button class="ui button">Contribute</button>
+    </div>
+  </div>
+  <div class="ui black segment b-club-board-header">
     {{boardClubTitle}}
+  </div>
+  <div class="ui raised segment">
+    <p>{{boardInfo.boardClubAnnouncement}}</p>
   </div>
 </div>
