@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BClubMaterialModule } from './modules/b-club-material/b-club-material.module';
-import { GalleryModule } from '@ngx-gallery/core';
-import { LightboxModule } from  '@ngx-gallery/lightbox';
 
 import { AppComponent } from './app.component';
 import { BClubNavbarComponent } from './components/b-club-navbar/b-club-navbar.component';
@@ -16,9 +14,6 @@ import { BClubAboutComponent } from './components/b-club-about/b-club-about.comp
 import { BClubHomeComponent } from './components/b-club-home/b-club-home.component';
 import { BClubGalleryComponent } from './components/b-club-gallery/b-club-gallery.component';
 import { BClubBoardComponent } from './components/b-club-board/b-club-board.component';
-
-const galleryConfig = {};
-const lightboxConfig = {};
 
 @NgModule({
   declarations: [
@@ -35,8 +30,6 @@ const lightboxConfig = {};
     BrowserModule,
     BrowserAnimationsModule,
     BClubMaterialModule,
-    GalleryModule.forRoot(galleryConfig),
-    LightboxModule.forRoot(lightboxConfig),
     RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [],

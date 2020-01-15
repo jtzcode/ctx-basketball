@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BClubBoardInfo } from '../../models/b-club-board-info'; 
 
-declare var $ :any;
 @Component({
   selector: 'b-club-board',
   templateUrl: './b-club-board.component.html',
@@ -41,14 +40,13 @@ export class BClubBoardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log($('#club-balance'));
     this.boardClubRatio = Math.round(this.boardInfo.boardBudgetBalance / this.boardInfo.boardBudgetTotal * 100);
     this.boardPrivateRatio = Math.round(this.boardInfo.boardBudgetPrivate / this.boardInfo.boardPrivateTotal * 100);
-    $('#club-balance').attr('data-percent', this.boardClubRatio).progress();
+    /* $('#club-balance').attr('data-percent', this.boardClubRatio).progress();
     $('#private-balance').attr('data-percent', this.boardPrivateRatio).progress();
 
     $('.b-club-balance-label').css('color', $('#club-balance .b-club-balance-bar').css('background-color'));
-    $('.b-club-private-label').css('color', $('#private-balance .b-club-balance-bar').css('background-color'));
+    $('.b-club-private-label').css('color', $('#private-balance .b-club-balance-bar').css('background-color')); */
   }
 
 }

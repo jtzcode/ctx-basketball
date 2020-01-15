@@ -23,7 +23,7 @@ export class BClubNavbarComponent implements OnInit {
         isActive: true
       },
       {
-        title: 'Gallery',
+        title: 'Administrator',
         action: 'home',
         isActive: false
       },
