@@ -26,9 +26,14 @@
     background-position: center center;
 }
 
+.mat-grid-list {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .gallery-container {
     width: 100%;
-    margin: 10px;
+    margin: 10px 0;
+    height: 100%;
 }
 
 .gallery-box 

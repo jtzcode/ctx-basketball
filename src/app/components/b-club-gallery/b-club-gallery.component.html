@@ -3,4 +3,19 @@
     <span class="grid-image" [style.backgroundImage]="'url('+ item.data.thumb +')'"></span>
   </button>
 </div> -->
-<div class="gallery-container">Gallery here</div>
+<div class="gallery-container">
+  <mat-grid-list cols="2" rowHeight="fit">
+    <mat-grid-tile>
+      <span class="grid-image" [style.backgroundImage]="'url('+ data.thumb +')'"></span>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <span class="grid-image" [style.backgroundImage]="'url('+ data.thumb +')'"></span>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <span class="grid-image" [style.backgroundImage]="'url('+ data.thumb +')'"></span>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <span class="grid-image" [style.backgroundImage]="'url('+ data.thumb +')'"></span>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
