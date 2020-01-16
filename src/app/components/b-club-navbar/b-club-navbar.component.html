@@ -1,20 +1,28 @@
-<div class="b-club-navbar-container">
-  <div class="b-club-navbar-items ui inverted menu">
-    <div id="b-club-navbar-logo" class="item">
-      <img [src]="logoURL">
+<nav class="b-club-navbar-items">
+  <a mat-button class="logo" href="/">
+    <img [src]="logoURL" class="b-club-navbar-logo">
+  </a>
+  <a mat-button href="/">Home</a>
+  <button mat-button [matMenuTriggerFor]="belowMenu">Administrator</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Upload Photos</button>
+  </mat-menu>
+  <div class="flex-spacer"></div>
+  <a mat-button href="/">Login</a>
+  <a mat-button href="/">About</a>
+
+  
+  <!-- <b-club-navbar-item (onSelected)="onItemActive($event)" [itemTitle]="option.title" [route]="option.action" [isActive]="option.isActive" *ngFor="let option of menuOptions"></b-club-navbar-item>
+  <div class="right menu">
+    <b-club-navbar-item [itemTitle]="'Login'" [isActive]="false"></b-club-navbar-item>
+    <div class="">
+        <div class="">
+            About
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item about-item" [routerLink]="item.action" (click)="onItemClicked()" *ngFor="let item of aboutItems">{{item.title}}</div>
+            </div>
+        </div>
     </div>
-    <b-club-navbar-item (onSelected)="onItemActive($event)" [itemTitle]="option.title" [route]="option.action" [isActive]="option.isActive" *ngFor="let option of menuOptions"></b-club-navbar-item>
-    <div class="right menu">
-      <b-club-navbar-item [itemTitle]="'Login'" [isActive]="false"></b-club-navbar-item>
-      <div class="ui compact menu inverted">
-          <div class="ui simple dropdown item">
-              About
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="item about-item" [routerLink]="item.action" (click)="onItemClicked()" *ngFor="let item of aboutItems">{{item.title}}</div>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
+  </div> -->
+</nav>

@@ -1,13 +1,19 @@
-.b-club-navbar-container {
-    position: relative;
-}
-#b-club-navbar-logo {
-    padding: 5px 5px;
-    margin-right: 5px;
+.b-club-navbar-logo {
+    height: 30px;
+    margin: 0 4px 3px 0;
 }
 .b-club-navbar-items {
-    margin-top: 5px;
-    border-radius: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #3f51b5;
+    color: white;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.flex-spacer {
+    flex-grow: 1;
 }
 .ui.menu .ui.dropdown .menu>.about-item {
     background-color: #1b1c1d !important;
